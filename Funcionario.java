@@ -32,7 +32,7 @@ public class Funcionario{
     public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
-
+    
     @Override
     public String toString() {
         return "Funcionario{" +
