@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Funcionario{
     protected String nome;
     protected String email;
@@ -7,6 +8,23 @@ public class Funcionario{
         this.nome = nome;
         this.email = email;
         this.matricula = matricula;
+    }
+
+    public void preencher(){
+        Scanner teclado = new Scanner (System.in);
+        teclado.nextLine();
+        System.out.println("----Preenchendo os dados do funcionario----");
+
+        System.out.println("Informe o nome");
+        this.nome= teclado.nextLine();
+        System.out.println("Informe o email");
+        this.email= teclado.nextLine();
+        System.out.println("Informe a matricula");
+        this.matricula= teclado.nextInt();
+
+        teclado.close();
+        System.out.println("----Dados preenchidos com sucesso----");
+        
     }
 
     public String getNome() {
