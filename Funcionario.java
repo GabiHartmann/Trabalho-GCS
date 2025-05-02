@@ -12,6 +12,7 @@ public class Funcionario{
 
     public void preencher(){
         Scanner teclado = new Scanner (System.in);
+        
         teclado.nextLine();
         System.out.println("----Preenchendo os dados do funcionario----");
 
@@ -58,5 +59,18 @@ public class Funcionario{
                 ", email='" + email + '\'' +
                 ", matricula=" + matricula +
                 '}';
+    }
+
+    public void preencherDados() {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Informe o nome do funcionário:");
+        this.nome = teclado.nextLine();
+
+        System.out.println("Informe o email do funcionário:");
+        this.email = teclado.nextLine();
+
+        System.out.println("Informe a matrícula do funcionário:");
+        this.matricula = teclado.nextInt();
     }
 }

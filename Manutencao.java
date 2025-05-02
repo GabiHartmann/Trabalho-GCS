@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Manutencao {
     protected Equipamentos equipamento;   
     protected String datapedido;
@@ -82,4 +83,37 @@ public class Manutencao {
         this.solucao = solucao;
     }
 
+    public void preencher() {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("----Preenchendo os dados da manutencao----");
+
+        System.out.println("Informe o equipamento");
+        this.equipamento.preencher();
+        teclado.nextLine();
+
+        System.out.println("Informe a data do pedido");
+        this.datapedido = teclado.nextLine();
+
+        System.out.println("Informe a descricao");
+        this.descricao = teclado.nextLine();
+
+        System.out.println("Informe o funcionario");
+        this.funcionario.preencher();
+        teclado.nextLine();
+
+        System.out.println("Informe a data de entrada");
+        this.dataEntrada = teclado.nextLine();
+
+        System.out.println("Informe a data de saida");
+        this.dataSaida = teclado.nextLine();
+
+        System.out.println("Informe o status");
+        this.status = teclado.nextLine();
+
+        System.out.println("Informe a solucao");
+        this.solucao = teclado.nextLine();
+
+        teclado.close();
+        System.out.println("----Dados preenchidos com sucesso----");
+    }
 }

@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Equipamentos{
     protected int identificador;
     protected String descricao;
@@ -84,5 +86,38 @@ public class Equipamentos{
                 ", funcionario=" + funcionario +
                 ", tipo='" + tipo + '\'' +
                 '}';
+    }
+
+    public void preencher(){
+        Scanner teclado = new Scanner (System.in);
+        teclado.nextLine();
+        System.out.println("----Preenchendo os dados do equipamento----");
+
+        System.out.println("Informe o identificador");
+        this.identificador= teclado.nextInt();
+        teclado.nextLine();
+
+        System.out.println("Informe a descricao");
+        this.descricao= teclado.nextLine();
+
+        System.out.println("Informe o numero de manutencao");
+        this.nmrManutencao= teclado.nextInt();
+        teclado.nextLine();
+
+        System.out.println("Informe a data de aquisicao");
+        this.dataAquizicao= teclado.nextLine();
+
+        System.out.println("Informe o valor do equipamento");
+        this.valor= teclado.nextDouble();
+        teclado.nextLine();
+
+        System.out.println("Informe o tipo do equipamento");
+        this.tipo= teclado.nextLine();
+
+        System.out.println("Informe o funcionario responsavel pelo equipamento");
+        this.funcionario.preencher();
+
+        System.out.println("----Dados preenchidos com sucesso----");
+
     }
 }
