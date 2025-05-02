@@ -22,7 +22,7 @@ public class App {
         Scanner teclado = new Scanner(System.in);
         int opcao = teclado.nextInt();
 
-        while(opcao !=0){
+        while(opcao !=-0){
         
 
             System.out.println("o que deseja fazer?");
