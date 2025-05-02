@@ -18,12 +18,23 @@ public class App {
         Manutencao manut1 = new Manutencao(notebook, "10/01/2023", "Troca de HD", joao, "11/01/2023", "12/01/2023", "Concluído", "HD substituído");
         manutencoes.add(manut1);
 
+
+        
+        
+        
         Scanner teclado = new Scanner(System.in);
+        System.out.println("o que deseja fazer?");
+            System.out.println("1. Cadastrar Funcionario");
+            System.out.println("2. Cadastrar Equipamento");
+            System.out.println("3. Cadastrar Manutencao");
+            System.out.println("4. Listar Funcionarios");
+            System.out.println("5. Listar Equipamentos");
+            System.out.println("6. Listar Manutencao");
+            System.out.println("7. Sair");
         int opcao = teclado.nextInt();
 
-        while(opcao !=0){
-        
-
+        while(opcao !=7){  
+            
             System.out.println("o que deseja fazer?");
             System.out.println("1. Cadastrar Funcionario");
             System.out.println("2. Cadastrar Equipamento");
@@ -31,9 +42,7 @@ public class App {
             System.out.println("4. Listar Funcionarios");
             System.out.println("5. Listar Equipamentos");
             System.out.println("6. Listar Manutencao");
-            System.out.println("0. Sair");
-
-        
+            System.out.println("7. Sair");
         
             if(opcao == 1){
                 Funcionario novoFuncionario = new Funcionario(null, null, 101);
