@@ -5,7 +5,8 @@ public class App {
     public static void main(String[] args) {
         ArrayList<Funcionario> funcionarios = new ArrayList<>();
         ArrayList<Equipamentos> equipamentos = new ArrayList<>();
-        ArrayList<Manutencao> manutencoes = new ArrayList<>();
+        ArrayList<Manutencao>
+        manutencoes = new ArrayList<>();
 
         Funcionario joao = new Funcionario("João Silva", "js@gmail.com", 12345);
         Funcionario maria = new Funcionario("Maria Costa", "maria@gmail.com", 54321);

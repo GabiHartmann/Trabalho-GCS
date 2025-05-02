@@ -13,7 +13,7 @@ public class Funcionario{
     public void preencher(){
         Scanner teclado = new Scanner (System.in);
         
-        teclado.nextLine();
+        //teclado.nextLine();
         System.out.println("----Preenchendo os dados do funcionario----");
 
         System.out.println("Informe o nome");
@@ -54,10 +54,10 @@ public class Funcionario{
     
     @Override
     public String toString() {
-        return "Funcionario{" +
-                "nome='" + nome + '\'' +
-                ", email='" + email + '\'' +
-                ", matricula=" + matricula +
+        return "Funcionario {" +
+                "nome= '" + nome + '\'' +
+                ", email= '" + email + '\'' +
+                ", matricula= " + matricula +
                 '}';
     }
 

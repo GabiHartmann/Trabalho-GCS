@@ -4,16 +4,16 @@ public class Equipamentos{
     protected int identificador;
     protected String descricao;
     protected int nmrManutencao;
-    protected String dataAquizicao;
+    protected String dataAquisicao;
     protected double valor;
     protected Funcionario funcionario;
     protected String tipo;
 
-    public Equipamentos(int identificador, String descricao, int nmrManutencao, String dataAquizicao, double valor, Funcionario funcionario, String tipo){
+    public Equipamentos(int identificador, String descricao, int nmrManutencao, String dataAquisicao, double valor, Funcionario funcionario, String tipo){
         this.identificador = identificador;
         this.descricao = descricao;
         this.nmrManutencao = nmrManutencao;
-        this.dataAquizicao = dataAquizicao;
+        this.dataAquisicao = dataAquisicao;
         this.valor = valor;
         this.funcionario = funcionario;
         this.tipo = tipo;
@@ -43,12 +43,12 @@ public class Equipamentos{
         this.nmrManutencao = nmrManutencao;
     }
 
-    public String getDataAquizicao() {
-        return dataAquizicao;
+    public String getdataAquisicao() {
+        return dataAquisicao;
     }
 
-    public void setDataAquizicao(String dataAquizicao) {
-        this.dataAquizicao = dataAquizicao;
+    public void setdataAquisicao(String dataAquisicao) {
+        this.dataAquisicao = dataAquisicao;
     }
 
     public double getValor() {
@@ -77,14 +77,14 @@ public class Equipamentos{
 
     @Override
     public String toString() {
-        return "Equipamentos{" +
-                "identificador=" + identificador +
-                ", descricao='" + descricao + '\'' +
+        return "Equipamentos {" +
+                "identificador= " + identificador +
+                ", descricao= '" + descricao + '\'' +
                 ", nmrManutencao=" + nmrManutencao +
-                ", dataAquizicao='" + dataAquizicao + '\'' +
-                ", valor=" + valor +
-                ", funcionario=" + funcionario +
-                ", tipo='" + tipo + '\'' +
+                ", dataAquisicao= '" + dataAquisicao + '\'' +
+                ", valor= " + valor +
+                ", funcionario= " + funcionario +
+                ", tipo= '" + tipo + '\'' +
                 '}';
     }
 
@@ -105,7 +105,7 @@ public class Equipamentos{
         teclado.nextLine();
 
         System.out.println("Informe a data de aquisicao");
-        this.dataAquizicao= teclado.nextLine();
+        this.dataAquisicao= teclado.nextLine();
 
         System.out.println("Informe o valor do equipamento");
         this.valor= teclado.nextDouble();
