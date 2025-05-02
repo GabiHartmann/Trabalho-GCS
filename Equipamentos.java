@@ -88,36 +88,36 @@ public class Equipamentos{
                 '}';
     }
 
-    public void preencher(){
-        Scanner teclado = new Scanner (System.in);
-        teclado.nextLine();
-        System.out.println("----Preenchendo os dados do equipamento----");
-
-        System.out.println("Informe o identificador");
-        this.identificador= teclado.nextInt();
-        teclado.nextLine();
-
-        System.out.println("Informe a descricao");
-        this.descricao= teclado.nextLine();
-
-        System.out.println("Informe o numero de manutencao");
-        this.nmrManutencao= teclado.nextInt();
-        teclado.nextLine();
-
-        System.out.println("Informe a data de aquisicao");
-        this.dataAquisicao= teclado.nextLine();
-
-        System.out.println("Informe o valor do equipamento");
-        this.valor= teclado.nextDouble();
-        teclado.nextLine();
-
-        System.out.println("Informe o tipo do equipamento");
-        this.tipo= teclado.nextLine();
-
-        System.out.println("Informe o funcionario responsavel pelo equipamento");
-        this.funcionario.preencher();
-
-        System.out.println("----Dados preenchidos com sucesso----");
-
+   public void preencher(){
+        try (Scanner teclado = new Scanner(System.in)) {
+            System.out.println("----Preenchendo os dados do equipamento----");
+        
+            System.out.println("Informe o identificador:");
+            this.identificador = teclado.nextInt();
+            teclado.nextLine();
+        
+            System.out.println("Informe a descrição:");
+            this.descricao = teclado.nextLine();
+        
+            System.out.println("Informe o número de manutenções:");
+            this.nmrManutencao = teclado.nextInt();
+            teclado.nextLine();
+        
+            System.out.println("Informe a data de aquisição:");
+            this.dataAquisicao = teclado.nextLine();
+        
+            System.out.println("Informe o valor do equipamento:");
+            this.valor = teclado.nextDouble();
+            teclado.nextLine();
+        
+            System.out.println("Informe o tipo do equipamento:");
+            this.tipo = teclado.nextLine();
+        
+            System.out.println("Preenchendo dados do funcionário responsável:");
+            this.funcionario = new Funcionario(null, null, 0); // instanciando antes de usar
+            this.funcionario.preencher();
+        
+            System.out.println("----Dados preenchidos com sucesso----");
+        }
     }
 }
