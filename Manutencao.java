@@ -9,15 +9,16 @@ public class Manutencao {
     protected String status;
     protected String solucao;
 
-    public Manutencao(Equipamentos equipamento, String datapedido, String descricao, Funcionario funcionario, String dataEntrada, String dataSaida, String status, String solucao) {
-        this.equipamento = equipamento;
-        this.datapedido = datapedido;
-        this.descricao = descricao;
-        this.funcionario = funcionario;
-        this.dataEntrada = dataEntrada;
-        this.dataSaida = dataSaida;
-        this.status = status;
-        this.solucao = solucao;
+   public Manutencao(Equipamentos equipamento, String datapedido, String descricao, Funcionario funcionario, String dataEntrada, String dataSaida, String status, String solucao) {
+    this.equipamento = equipamento;
+    this.datapedido = datapedido;
+    this.descricao = descricao;
+    this.funcionario = funcionario;
+    this.dataEntrada = dataEntrada;
+    this.dataSaida = dataSaida;
+    this.status = status;
+    this.solucao = solucao;
+       
     }
 
     public Equipamentos getEquipamento() {
@@ -113,7 +114,6 @@ public class Manutencao {
         System.out.println("Informe a solucao");
         this.solucao = teclado.nextLine();
 
-        teclado.close();
         System.out.println("----Dados preenchidos com sucesso----");
     }
 }
