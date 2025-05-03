@@ -1,31 +1,31 @@
 import java.util.Scanner;
-public class Funcionario{
+
+public class Funcionario {
     protected String nome;
     protected String email;
     protected int matricula;
 
-    public Funcionario(String nome, String email, int matricula){
+    public Funcionario(String nome, String email, int matricula) {
         this.nome = nome;
         this.email = email;
         this.matricula = matricula;
     }
 
-    public void preencher(){
-        Scanner teclado = new Scanner (System.in);
-        
-        //teclado.nextLine();
+    public void preencher() {
+        Scanner teclado = new Scanner(System.in);
+
         System.out.println("----Preenchendo os dados do funcionario----");
-
         System.out.println("Informe o nome");
-        this.nome= teclado.nextLine();
-        System.out.println("Informe o email");
-        this.email= teclado.nextLine();
-        System.out.println("Informe a matricula");
-        this.matricula= teclado.nextInt();
+        this.nome = teclado.nextLine();
 
-        teclado.close();
+        System.out.println("Informe o email");
+        this.email = teclado.nextLine();
+
+        System.out.println("Informe a matricula");
+        this.matricula = teclado.nextInt();
+
         System.out.println("----Dados preenchidos com sucesso----");
-        
+
     }
 
     public String getNome() {
@@ -51,26 +51,13 @@ public class Funcionario{
     public void setMatricula(int matricula) {
         this.matricula = matricula;
     }
-    
+
     @Override
     public String toString() {
         return "Funcionario {" +
-                "nome= '" + nome + '\'' +
-                ", email= '" + email + '\'' +
-                ", matricula= " + matricula +
+                "nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", matricula=" + matricula +
                 '}';
-    }
-
-    public void preencherDados() {
-        Scanner teclado = new Scanner(System.in);
-
-        System.out.println("Informe o nome do funcionário:");
-        this.nome = teclado.nextLine();
-
-        System.out.println("Informe o email do funcionário:");
-        this.email = teclado.nextLine();
-
-        System.out.println("Informe a matrícula do funcionário:");
-        this.matricula = teclado.nextInt();
     }
 }
