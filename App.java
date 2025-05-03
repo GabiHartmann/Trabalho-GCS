@@ -66,7 +66,7 @@ public class App {
                     break;
                 case 7:
                     System.out.println("Saindo do sistema...");
-                    break;
+                    return;
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
             }
